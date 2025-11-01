@@ -1,21 +1,33 @@
+import React from 'react';
+import { Client } from '../types/types';
 
-import {Client} from '../types/types'
-
-function ClientCard({name, country, email}: Client) {
-    // const client{
-    //     name = "Shemsa",
-    //     country = "Rwanda",
-    //     email = "patienceshemssa@gmail.com"
-    // }
-  return (
-    <div>
-        <div className="p-4 border border-gray-300 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-2">{name}</h2>
-            <p className="text-gray-600 mb-1">Country: {country}</p>
-            {email && <p className="text-gray-600">Email: {email}</p>}
-        </div>
-    </div>
-  )
+interface ClientCardProps {
+  client: Client;
+  onEdit?: (client: Client) => void;
 }
 
-export default ClientCard
+const ClientCard: React.FC<ClientCardProps> = ({ client, onEdit }) => {
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+      <div className="flex justify-between items-start">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900">{client.name}</h3>
+          <p className="text-gray-600 mt-1">{client.country}</p>
+          {client.email && (
+            <p className="text-blue-600 mt-1">{client.email}</p>
+          )}
+        </div>
+        {onEdit && (
+          <button
+            onClick={() => onEdit(client)}
+            className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+          >
+            Edit
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ClientCard;
