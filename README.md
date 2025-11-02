@@ -38,11 +38,17 @@ A mini-dashboard that displays **clients**, **projects**, and **payments** using
 **Folder Structure**
 
 src/
+
 ├── components/     → Reusable UI components
+
 ├── context/        → Global state (Context + useReducer)
+
 ├── data/           → Dummy data
+
 ├── types/          → TypeScript interfaces
+
 ├── utils/          → Helper functions
+
 └── App.tsx         → Main layout
 
 
