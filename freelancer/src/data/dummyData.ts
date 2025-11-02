@@ -52,7 +52,7 @@ export const mockProjects: Project[] = [
 export const mockPayments: Payment[] = [
   {
     projectId: "1",
-    amount: 8000,
+    amount: 5000,
     date: new Date().toISOString()
   },
 {
