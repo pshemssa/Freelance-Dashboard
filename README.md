@@ -52,6 +52,8 @@ src/
 └── App.tsx         → Main layout
 
 
+
+
 2. **Install dependencies**
     npm install
 
