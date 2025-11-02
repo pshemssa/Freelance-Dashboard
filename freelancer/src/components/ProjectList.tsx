@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Project, ProjectStatus, PaymentStatus } from '../types/types';
-import { Filter, Search, DollarSign, User, Clock, CheckCircle, AlertCircle, Trash2 } from 'lucide-react';
+import { Filter, Search, DollarSign, User, Clock, CheckCircle, AlertCircle} from 'lucide-react';
 import { getStatusColor, getCardBackground, getTextColor, getSecondaryTextColor, getInputStyle } from '../utils';
 import { useTheme } from '../context/ThemeContext';
 

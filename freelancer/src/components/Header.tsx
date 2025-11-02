@@ -1,5 +1,5 @@
 import React from 'react';
-import { Moon, Sun, User, Briefcase, DollarSign, BriefcaseIcon } from 'lucide-react';
+import { Moon, Sun, User, Briefcase, DollarSign} from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useAppContext } from '../context/appContext';
 import { calculateDashboardStats } from '../utils';

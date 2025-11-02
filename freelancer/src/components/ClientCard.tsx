@@ -1,16 +1,15 @@
 import React from 'react';
 import { Client } from '../types/types';
-import { Mail, MapPin, Edit2, DollarSign, Briefcase } from 'lucide-react';
+import { Mail, MapPin, DollarSign, Briefcase } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useAppContext } from '../context/appContext';
 import { getProjectsByClientId, getClientRevenue, getCardBackground, getTextColor, getSecondaryTextColor } from '../utils';
 
 interface ClientCardProps {
   client: Client;
-  onEdit?: (client: Client) => void;
 }
 
-const ClientCard: React.FC<ClientCardProps> = ({ client, onEdit }) => {
+const ClientCard: React.FC<ClientCardProps> = ({ client }) => {
   const { theme } = useTheme();
   const { state } = useAppContext();
   
@@ -43,18 +42,7 @@ const ClientCard: React.FC<ClientCardProps> = ({ client, onEdit }) => {
               )}
             </div>
           </div>
-          {/* {onEdit && (
-            <button
-              onClick={() => onEdit(client)}
-              className={`p-2 rounded-lg transition-colors ${
-                theme === 'dark'
-                  ? 'bg-gray-700 hover:bg-gray-600 text-blue-400'
-                  : 'bg-gray-100 hover:bg-gray-200 text-blue-600'
-              }`}
-            >
-              <Edit2 className="h-4 w-4" />
-            </button>
-          )} */}
+       
         </div>
 
         {/* Stats */}
