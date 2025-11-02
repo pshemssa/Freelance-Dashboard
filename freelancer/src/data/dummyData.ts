@@ -11,8 +11,15 @@ export const mockClients: Client[] = [
     id: "2",
     name: "NewTech",
     country: "DRC",
-    email: "newteach@gmail.com"
+    email: "newtech@gmail.com"
+  },
+  {
+    id: "3",
+    name: "NewGig",
+    country: "Europe",
+    email: "newgig@gmail.com"
   }
+
 ];
 
 export const mockProjects: Project[] = [
@@ -22,7 +29,7 @@ export const mockProjects: Project[] = [
     title: "E-commerce Website",
     budget: 5000,
     status: "completed",
-    paymentStatus: "paid"
+    paymentStatus: "unpaid"
   },
   {
     id: "2",
@@ -30,14 +37,32 @@ export const mockProjects: Project[] = [
     title: "Mobile App Development",
     budget: 8000,
     status: "in-progress",
-    paymentStatus: "unpaid"
+    paymentStatus: "paid"
+  },
+  {
+    id: "3",
+    clientId: "3",
+    title: "Database Design",
+    budget: 5000,
+    status: "pending",
+    paymentStatus: "paid"
   }
 ];
 
 export const mockPayments: Payment[] = [
   {
     projectId: "1",
+    amount: 8000,
+    date: new Date().toISOString()
+  },
+{
+    projectId: "3",
     amount: 5000,
-    date: "2024-01-15T00:00:00.000Z"
-  }
+    date: new Date().toISOString()
+},
+{
+    projectId: "2",
+    amount: 8000,
+    date: new Date().toISOString()
+}
 ];
